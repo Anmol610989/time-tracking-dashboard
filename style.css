@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Rubik", sans-serif;
+}
+
+section{
+    background: hsl(226, 43%, 10%);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.grid-container{
+    display: grid;
+    margin: auto;
+    width: 70%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    color: #fff;
+    gap: 16px;
+    border-radius: 12px;
+}
+
+.br{
+    border-radius: 12px;
+}
+
+
+/* ############## person div styling #################### */
+.item-1{
+    grid-row: 1 / -1;
+    background-color: hsl(235, 46%, 20%);
+}
+
+.person-info{
+    height: 70%;
+    padding: 3rem;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 12px;
+}
+
+.person-info img{
+    width: 70px;
+    height: 70px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.person-info .report{
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.451);
+    margin-top: 3.6rem;
+}
+
+.person-info .person-name{
+    font-size: 3.6rem;
+    font-weight: 300;
+}
+
+
+.report-span{
+    padding: 2rem 3rem;
+    height: 30%;
+}
+
+.report-span div{
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.451);
+    transition: color 0.2s ease-in-out;
+}
+
+.report-span div label{
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.451);
+    cursor: pointer;
+}
+
+.report-span div input[type='radio']{
+    opacity: 0;
+}
+
+.report-span div label:hover{
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* ######################### grid item div styling ######################333 */
+
+.grid-item{
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item .icon{
+    position: absolute;
+    right: 0; 
+    top: -10px;
+}
+
+.container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 80%;
+    background-color: hsl(235, 46%, 20%);
+    padding: 2rem 3rem;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.container .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading h2{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.heading span{
+    cursor: pointer;
+}
+
+.container .time span{
+    display: block;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+.container .time p{
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.451);
+    font-weight:300;
+
+}
+.container:hover{
+    background-color: hsl(235, 45%, 61%);
+}
+
+.work-info{
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play-info{
+    background-color: hsl(195, 74%, 62%);
+}
+
+.study-info{
+    background-color: hsl(348, 100%, 68%);
+}
+
+.exercise-info{
+    background-color: hsl(145, 58%, 55%);
+}
+
+.social-info{
+    background-color: hsl(264, 64%, 52%);
+}
+
+.self-care-info{
+    background-color: hsl(43, 84%, 65%);
+}
+
+
+@media screen and (max-width: 1199px) {
+
+
+    section{
+        height: auto;
+        
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 200px);
+        width: 90%;
+        margin: 6rem auto;
+    }
+
+    .item-1{
+        grid-row: 1 / 2;
+        z-index: 100;
+    }
+
+    .report-span{
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        padding: 2rem 3rem;
+    }
+
+    .report-span div{
+        margin: 0;
+    }
+
+    .person-info {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .person-info div .report{
+        padding: 10px;
+        margin: 0;
+        align-self: flex-start;
+    }
+
+    .person-info img{
+        height: 90px; 
+        width: 90px;
+    }
+
+    .person-info .person-name{
+        font-size: 2.6rem;
+    }
+
+    
+}
